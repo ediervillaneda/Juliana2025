@@ -6,7 +6,7 @@
     "template": "remoteconfig.template.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "dist/clarita2024",
     "ignore": [
       "firebase.json",
       "**/.*",
