@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+}
+
+.countdown {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
