@@ -1,17 +1,17 @@
 .timer {
-  text-align: center;
   font-family: 'Covered By Your Grace', cursive;
   line-height: 1;
   padding: 20px;
+  text-align: end;
 
   div {
     margin: 15px;
     min-width: 100px;
 
     span {
+      color: white;
       display: block;
       font-size: 25px;
-      color: white;
     }
   }
 }
@@ -19,8 +19,8 @@
 
 @media (min-width: 320px) {
   .timer {
-    display: flex;
     align-items: flex-end;
+    display: flex;
     flex-direction: column;
   }
 }
@@ -28,28 +28,28 @@
 @media (min-width: 768px),
 (orientation: landscape) {
   .timer {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     flex-direction: row;
   }
 }
 
 .days {
-  font-size: 200px;
   color: #db4844;
+  font-size: 200px;
 }
 
 .hours {
-  font-size: 150px;
   color: #f07c22;
+  font-size: 150px;
 }
 
 .minutes {
-  font-size: 100px;
   color: #f6da74;
+  font-size: 100px;
 }
 
 .seconds {
-  font-size: 50px;
   color: #abcd58;
+  font-size: 50px;
 }
