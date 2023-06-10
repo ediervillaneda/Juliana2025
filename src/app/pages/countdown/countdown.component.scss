@@ -1,20 +1,37 @@
 .timer {
   text-align: center;
   font-family: 'Covered By Your Grace', cursive;
-  display: flex;
-  align-items: flex-start;
   line-height: 1;
   padding: 20px;
-  font-size: 40px;
-}
-.timer > div{
-  margin: 15px;
+
+  div {
+    margin: 15px;
+    min-width: 100px;
+
+    span {
+      display: block;
+      font-size: 25px;
+      color: white;
+    }
+  }
 }
 
-span {
-  display: block;
-  font-size: 20px;
-  color: white;
+
+@media (min-width: 320px) {
+  .timer {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px),
+(orientation: landscape) {
+  .timer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
 }
 
 .days {
