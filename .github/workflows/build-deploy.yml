@@ -30,12 +30,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist/clarita2024
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.2
-        with:
-          server: ${{ secrets.FTP_URL }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_PATH }}
-          local-dir: dist/clarita2024/
-
