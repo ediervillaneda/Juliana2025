@@ -1,4 +1,4 @@
-name: 🚀 Build and Deploy
+name: 🚀 Build and Deploy on merge
 
 on:
   push:
@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+        uses: actions/checkout@v3
+      - name: ⚙️ Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-      - uses: actions/cache@v1
+          node-version: "18.x"
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -25,8 +26,8 @@ jobs:
           npm install
           npm run-script deploy
       - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/clarita2024
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: dist/clarita2024
