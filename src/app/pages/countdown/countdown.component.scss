@@ -5,7 +5,7 @@
   text-align: end;
 
   div {
-    margin: 15px;
+    margin: 0px 15px;
     min-width: 100px;
 
     span {
@@ -16,6 +16,31 @@
   }
 }
 
+@media (max-height: 650px) and (max-width:680px) {
+  .timer {
+    div {
+      span {
+        font-size: 4vh;
+      }
+    }
+
+    .days {
+      font-size: 25vh;
+    }
+
+    .hours {
+      font-size: 20vh;
+    }
+
+    .minutes {
+      font-size: 15vh;
+    }
+
+    .seconds {
+      font-size: 10vh;
+    }
+  }
+}
 
 @media (min-width: 320px) {
   .timer {
