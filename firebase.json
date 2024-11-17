@@ -6,11 +6,17 @@
     "template": "remoteconfig.template.json"
   },
   "hosting": {
-    "public": "dist/clarita2024",
+    "public": "dist/maye2025",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
