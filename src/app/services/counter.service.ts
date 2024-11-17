@@ -6,7 +6,7 @@ import { Counter } from '../interfaces/counter.interface';
   providedIn: 'root',
 })
 export class CounterService {
-  seventhOfJune = new Date(2024, 5, 7, 7, 30).getTime();
+  birthDay = new Date(2024, 12, 9, 0, 0).getTime();
 
   cnt: Counter = {
     days: 0,
@@ -30,7 +30,7 @@ export class CounterService {
     // get the difference
     let diff;
     let mult = 1000;
-    diff = this.seventhOfJune - today;
+    diff = this.birthDay - today;
 
     this.cnt.days = Math.floor(diff / (mult * 86400));
     this.cnt.hours = Math.floor((diff % (mult * 86400)) / (mult * 3600));
