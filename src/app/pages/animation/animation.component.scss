@@ -17,7 +17,7 @@ body {
 h1,
 h2,
 span {
-  display: block
+  display: block;
 }
 
 $colors: #ef8d22, #feff28, #2bd8ff, #fc85e1;
@@ -61,7 +61,7 @@ $box-shadow2: (
   -webkit-animation-delay: $settings;
   -o-animation-delay: $settings;
   -ms-animation-delay: $settings;
-  animation-delay: $settings
+  animation-delay: $settings;
 }
 
 @mixin animation-duration ($settings) {
@@ -69,7 +69,7 @@ $box-shadow2: (
   -webkit-animation-duration: $settings;
   -o-animation-duration: $settings;
   -ms-animation-duration: $settings;
-  animation-duration: $settings
+  animation-duration: $settings;
 }
 
 @mixin animation ($settings) {
@@ -77,7 +77,7 @@ $box-shadow2: (
   -webkit-animation: $settings;
   -o-animation: $settings;
   -ms-animation: $settings;
-  animation: $settings
+  animation: $settings;
 }
 
 @mixin transform ($settings) {
@@ -85,7 +85,7 @@ $box-shadow2: (
   -moz-transform: $settings;
   -webkit-transform: $settings;
   -o-transform: $settings;
-  -ms-transform: $settings
+  -ms-transform: $settings;
 }
 
 body {
@@ -93,7 +93,7 @@ body {
   cursor: crosshair;
   perspective: 1000px;
   transform-style: preserve-3d;
-  font-family: "Pacifico", cursive
+  font-family: "Pacifico", cursive;
 }
 
 h1 {
@@ -101,13 +101,13 @@ h1 {
   text-align: center;
   width: 100%;
   top: 10vh;
-  font-size: 6vh;
+  font-size: 6vw;
   background: -webkit-linear-gradient(0deg, rgb(170, 118, 243) 0%, rgb(115, 118, 243) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 500;
   z-index: -1;
-  letter-spacing: 5px
+  letter-spacing: .1em;
 }
 
 span {
@@ -115,7 +115,7 @@ span {
   text-align: center;
   width: 100%;
   top: 2vh;
-  font-size: 70px
+  font-size: 7vw;
 }
 
 h2 {
@@ -123,22 +123,24 @@ h2 {
   text-align: center;
   width: 100%;
   top: 50vh;
-  font-size: 4vh;
+  font-size: 4vw;
   background: -webkit-linear-gradient(90deg, rgb(99, 90, 170) 0%, rgb(53, 53, 53) 100%);
   font-family: 'Concert One', cursive;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width:625px) {
   h1 {
     top: 1vh;
-    font-size: 5vh;
+    font-size: 10vw;
   }
-  h2{
-    font-size: 3vh;
+
+  h2 {
+    font-size: 6vw;
   }
-  span{
+
+  span {
     display: none;
   }
 }
@@ -161,22 +163,22 @@ h2 {
       $y: random() * 100vh;
       transform: translate($x, $y);
       animation-duration: random() * 3s + 2s;
-      animation-delay: random() * -5s
+      animation-delay: random() * -5s;
     }
   }
 }
 
 @keyframes explosion {
   0% {
-    opacity: 0
+    opacity: 0;
   }
 
   70% {
-    opacity: 1
+    opacity: 1;
   }
 
   100% {
-    transform: translate(50vw, 100vh)
+    transform: translate(50vw, 100vh);
   }
 }
 
@@ -190,7 +192,7 @@ h2 {
   border-radius: 100%;
   transform: translateZ(100px);
   z-index: 1;
-  box-shadow: 0 4px 0 #f4f9fd, 0 8px 0 #dba9ff, 0 12px 0 #fec3b3, 0 16px 0 #f7f6fb, 0 20px 0 #f7f6fb, 0 24px 0 #f7f6fb, 0 28px 0 #f7f6fb, 0 32px 0 #fea0bb, 0 36px 0 #fea0bb, 0 40px 0 #9cef9d, 0 44px 0 #9cef9d, 0 48px 0 #f7f6fb, 0 52px 0 #f7f6fb, 0 56px 0 #f7f6fb, 0 60px 0 #f7f6fb, 0 64px 0 #f7f6fb, 0 68px 0 #dfa5fc, 0 72px 0 #dfa5fc, 0 76px 0 #fafffe, 0 80px 0 #fafffe
+  box-shadow: 0 4px 0 #f4f9fd, 0 8px 0 #dba9ff, 0 12px 0 #fec3b3, 0 16px 0 #f7f6fb, 0 20px 0 #f7f6fb, 0 24px 0 #f7f6fb, 0 28px 0 #f7f6fb, 0 32px 0 #fea0bb, 0 36px 0 #fea0bb, 0 40px 0 #9cef9d, 0 44px 0 #9cef9d, 0 48px 0 #f7f6fb, 0 52px 0 #f7f6fb, 0 56px 0 #f7f6fb, 0 60px 0 #f7f6fb, 0 64px 0 #f7f6fb, 0 68px 0 #dfa5fc, 0 72px 0 #dfa5fc, 0 76px 0 #fafffe, 0 80px 0 #fafffe;
 }
 
 .plate {
@@ -204,7 +206,7 @@ h2 {
   border-radius: 100%;
   background: radial-gradient(ellipse closest-side at center, rgba(8, 199, 254, 1) 0%, rgba(4, 215, 242, 1) 71%, rgba(2, 255, 208, 1) 100%);
   box-shadow: 0 3px 0 #00e2e1, 0 6px 0 #00d3fb;
-  transform: translateZ(80px)
+  transform: translateZ(80px);
 }
 
 .candle {
@@ -216,12 +218,12 @@ h2 {
   background: linear-gradient(0deg, rgba(183, 244, 167, 1) 0%, rgba(255, 255, 255, 1) 100%);
   border-radius: 4px;
   transform: translateZ(120px);
-  z-index: 2
+  z-index: 2;
 }
 
 #flame {
   position: absolute;
-  z-index: 10
+  z-index: 10;
 }
 
 .lit {
@@ -236,33 +238,33 @@ h2 {
   margin: auto;
   box-shadow: 0 0 17px 7px rgba(251, 246, 190, .71);
   transform-origin: bottom;
-  animation: flicker 1s ease-in-out alternate infinite
+  animation: flicker 1s ease-in-out alternate infinite;
 }
 
 @keyframes flicker {
   0% {
     transform: skewX(5deg);
-    box-shadow: 0 0 17px 10px rgba(251, 246, 190, .71)
+    box-shadow: 0 0 17px 10px rgba(251, 246, 190, .71);
   }
 
   25% {
     transform: skewX(-5deg);
-    box-shadow: 0 0 17px 5px rgba(251, 246, 190, .71)
+    box-shadow: 0 0 17px 5px rgba(251, 246, 190, .71);
   }
 
   50% {
     transform: skewX(10deg);
-    box-shadow: 0 0 17px 7px rgba(251, 246, 190, .71)
+    box-shadow: 0 0 17px 7px rgba(251, 246, 190, .71);
   }
 
   75% {
     transform: skewX(-10deg);
-    box-shadow: 0 0 17px 5px rgba(251, 246, 190, .71)
+    box-shadow: 0 0 17px 5px rgba(251, 246, 190, .71);
   }
 
   100% {
     transform: skewX(5deg);
-    box-shadow: 0 0 17px 10px rgba(251, 246, 190, .71)
+    box-shadow: 0 0 17px 10px rgba(251, 246, 190, .71);
   }
 }
 
@@ -273,24 +275,24 @@ h2 {
   height: 5px;
   border-radius: 50%;
   box-shadow: $box-shadow2;
-  @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards))
+  @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
 }
 
 .pyro>.after {
   @include animation-delay((1.25s, 1.25s, 1.25s));
-  @include animation-duration((1.25s, 1.25s, 6.25s))
+  @include animation-duration((1.25s, 1.25s, 6.25s));
 }
 
 @include keyframes(bang) {
   to {
-    box-shadow: $box-shadow
+    box-shadow: $box-shadow;
   }
 }
 
 @include keyframes(gravity) {
   to {
     @include transform(translateY(200px));
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -299,30 +301,30 @@ h2 {
   0%,
   19.9% {
     margin-top: 10%;
-    margin-left: 40%
+    margin-left: 40%;
   }
 
   20%,
   39.9% {
     margin-top: 40%;
-    margin-left: 30%
+    margin-left: 30%;
   }
 
   40%,
   59.9% {
     margin-top: 20%;
-    margin-left: 70%
+    margin-left: 70%;
   }
 
   60%,
   79.9% {
     margin-top: 30%;
-    margin-left: 20%
+    margin-left: 20%;
   }
 
   80%,
   99.9% {
     margin-top: 30%;
-    margin-left: 80%
+    margin-left: 80%;
   }
 }
