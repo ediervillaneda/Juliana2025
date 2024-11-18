@@ -1,9 +1,9 @@
-<ng-container *ngIf="_counter.cnt.status; then animacion; else countDown" />
+<ng-container *ngIf="!_counter.cnt.status; then animacion; else countDown" />
 
 <ng-template #countDown>
   <app-countdown></app-countdown>
 </ng-template>
 
 <ng-template #animacion>
-  <div>Animacion</div>
+  <app-animation></app-animation>
 </ng-template>
