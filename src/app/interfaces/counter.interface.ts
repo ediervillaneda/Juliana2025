@@ -3,6 +3,5 @@ export interface Counter {
   hours: number;
   minutes: number;
   seconds: number;
-  daysText: string;
   status: number;
 }

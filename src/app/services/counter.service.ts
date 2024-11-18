@@ -6,14 +6,17 @@ import { Counter } from '../interfaces/counter.interface';
   providedIn: 'root',
 })
 export class CounterService {
-  birthDay = new Date(2024, 12, 9, 0, 0).getTime();
+  private readonly birthDay = new Date(2024, 11, 9, 0, 0).getTime();
+  private readonly MS_IN_SECOND = 1000;
+  private readonly MS_IN_MINUTE = this.MS_IN_SECOND * 60;
+  private readonly MS_IN_HOUR = this.MS_IN_MINUTE * 60;
+  private readonly MS_IN_DAY = this.MS_IN_HOUR * 24;
 
   cnt: Counter = {
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
-    daysText: '',
     status: 3,
   };
 
@@ -23,28 +26,16 @@ export class CounterService {
 
   countdown() {
     // get today's date
-    const today = new Date().getTime();
-    const month = new Date().getMonth();
-    this.cnt.daysText = 'dias';
+    const now = new Date().getTime();
+    const diff = this.birthDay - now;
 
-    // get the difference
-    let diff;
-    let mult = 1000;
-    diff = this.birthDay - today;
+    this.cnt.days = Math.floor(diff / this.MS_IN_DAY);
+    this.cnt.hours = Math.floor((diff % this.MS_IN_DAY) / this.MS_IN_HOUR);
+    this.cnt.minutes = Math.floor((diff % this.MS_IN_HOUR) / this.MS_IN_MINUTE);
+    this.cnt.seconds = Math.floor((diff % this.MS_IN_MINUTE) / this.MS_IN_SECOND);
 
-    this.cnt.days = Math.floor(diff / (mult * 86400));
-    this.cnt.hours = Math.floor((diff % (mult * 86400)) / (mult * 3600));
-    this.cnt.minutes = Math.floor((diff % (mult * 3600)) / (mult * 60));
-    this.cnt.seconds = Math.floor((diff % (mult * 60)) / mult);
-
-    if (this.cnt.days == 1) {
-      this.cnt.daysText = 'dia';
-    }
-
-    if (month <= 3) {
-      this.cnt.status = 2;
-    } else {
-      this.cnt.status = diff <= 0 ? 1 : 0;
+    if (diff >= 0) {
+      this.cnt.status = 0;
     }
   }
 }
