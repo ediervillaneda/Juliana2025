@@ -2,47 +2,30 @@
 
 .animation,
 body {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  background-color: black !important;
+  background: linear-gradient(to right, #e2b8f7, #d4bafa, #c7bcfb, #b9befb, #acbff9);
+  cursor: crosshair;
   font-family: "Pacifico", cursive;
-  z-index: -1000
-}
-
-.mobile {
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  top: 50px;
-  font-size: 90px;
-  display: block
+  height: 100vh;
+  margin: 0;
+  perspective: 1000px;
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100vw;
+  z-index: -1000;
 }
 
 h1,
 h2,
 span {
-  display: none;
+  display: block
 }
 
-@media screen and (min-width:670px) {
-  .mobile {
-    display: none;
-  }
-
-  h1,
-  h2,
-  span {
-    display: block
-  }
-
-  $colors: #ef8d22, #feff28, #2bd8ff, #fc85e1;
-  $particles: 50;
-  $width: 500;
-  $height: 500;
-  $box-shadow: (
-  );
+$colors: #ef8d22, #feff28, #2bd8ff, #fc85e1;
+$particles: 50;
+$width: 500;
+$height: 500;
+$box-shadow: (
+);
 $box-shadow2: (
 );
 
@@ -119,13 +102,12 @@ h1 {
   width: 100%;
   top: 10vh;
   font-size: 6vh;
-  background: -webkit-linear-gradient(0deg, rgba(206, 173, 252, 1) 0%, rgba(163, 187, 251, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(170, 118, 243) 0%, rgb(115, 118, 243) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Concert One', cursive;
-  font-weight: 400;
+  font-weight: 500;
   z-index: -1;
-  letter-spacing: 6px
+  letter-spacing: 5px
 }
 
 span {
@@ -142,9 +124,23 @@ h2 {
   width: 100%;
   top: 50vh;
   font-size: 4vh;
-  background: -webkit-linear-gradient(90deg, rgba(233, 230, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(99, 90, 170) 0%, rgb(53, 53, 53) 100%);
+  font-family: 'Concert One', cursive;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
+}
+
+@media (max-width:625px) {
+  h1 {
+    top: 1vh;
+    font-size: 5vh;
+  }
+  h2{
+    font-size: 3vh;
+  }
+  span{
+    display: none;
+  }
 }
 
 .bokeh {
@@ -329,5 +325,4 @@ h2 {
     margin-top: 30%;
     margin-left: 80%
   }
-}
 }
