@@ -16,7 +16,7 @@ $box-shadow2: (
 .torta,
 body {
   background: linear-gradient(to right, #e2b8f7, #d4bafa, #c7bcfb, #b9befb, #acbff9);
-  cursor: crosshair;
+  cursor: none;
   font-family: "Pacifico", cursive;
   height: 100vh;
   margin: 0;
@@ -92,12 +92,12 @@ h2 {
 
 @media (max-width:625px) {
   h1 {
-    top: 1vh;
-    font-size: 10vw
+    top: 2vh;
+    font-size: 12vw
   }
 
   h2 {
-    font-size: 4vw
+    font-size: 6vw
   }
 
   span {
