@@ -35,7 +35,7 @@ export class CounterService {
     this.cnt.seconds = Math.floor((diff % this.MS_IN_MINUTE) / this.MS_IN_SECOND);
 
     if (diff >= 0) {
-      this.cnt.status = 1;
+      this.cnt.status = 0;
     }
   }
 }
