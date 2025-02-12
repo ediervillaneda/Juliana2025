@@ -18,8 +18,17 @@ $box-shadow2: ();
   $box-shadow2: $box-shadow2, 0 0 #fff;
 }
 
-.container,
 body {
+  cursor: none;
+  margin: 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  width: 100vw;
+  // position: relative;
+}
+.container {
+  font-family: "Pacifico", cursive;
+
   background: linear-gradient(
     to right,
     #e2b8f7,
@@ -28,23 +37,16 @@ body {
     #b9befb,
     #acbff9
   );
-  cursor: none;
-  font-family: "Pacifico", cursive;
-  height: 100vh;
-  margin: 0;
-  perspective: 1000px;
-  position: relative;
-  transform-style: preserve-3d;
-  width: 100vw;
   place-items: center;
-
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  z-index: -10;
 }
 
 table {
+  z-index: 1;
   border-collapse: collapse;
   width: 70vw; // Ajusta el ancho según necesites
   // max-width: 80vw; // Para que no sea demasiado grande
@@ -87,7 +89,8 @@ span {
 .titulo {
   // position: fixed;
   text-align: center;
-  width: 100%;
+  width: 99%;
+  padding: 0.5%;
   // top: 10vh;
   font-size: 5vw;
   background: -webkit-linear-gradient(
@@ -113,7 +116,8 @@ span {
 
 .texto {
   text-align: center;
-  // width: 65vw;
+  width: 98%;
+  padding: 1%;
   // top: 65vh;
   left: 50vw;
   font-size: 2vw;
@@ -200,7 +204,7 @@ span {
   height: 100px;
   transform: translateX(-50%) translateY(-50%);
   // background-color: #feff28;
-  z-index: -1;
+  // z-index: -1;
 
   .plate {
     position: fixed;
