@@ -1,12 +1,6 @@
 {
-  "storage": {
-    "rules": "storage.rules"
-  },
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
-  },
   "hosting": {
-    "public": "dist/maye2025",
+    "public": "dist/juliana2025",
     "ignore": [
       "firebase.json",
       "**/.*",

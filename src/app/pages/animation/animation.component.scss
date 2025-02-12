@@ -58,8 +58,8 @@ h1 {
   position: fixed;
   text-align: center;
   width: 100%;
-  top: 10vh;
-  font-size: 6vw;
+  top: 8vh;
+  font-size: 5vw;
   background: -webkit-linear-gradient(0deg, rgb(170, 118, 243) 0%, rgb(115, 118, 243) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -80,9 +80,9 @@ h2 {
   position: absolute;
   text-align: center;
   width: 95vw;
-  top: 50vh;
+  top: 65vh;
   left: 50vw;
-  font-size: 3vw;
+  font-size: 2vw;
   background: -webkit-linear-gradient(90deg, rgb(99, 90, 170) 0%, rgb(53, 53, 53) 100%);
   font-family: 'Concert One', cursive;
   -webkit-background-clip: text;
@@ -93,11 +93,12 @@ h2 {
 @media (max-width:625px) {
   h1 {
     top: 2vh;
-    font-size: 12vw
+    font-size: 10vw
   }
 
   h2 {
-    font-size: 6vw
+    top: 60vh;
+    font-size: 5vw
   }
 
   span {
