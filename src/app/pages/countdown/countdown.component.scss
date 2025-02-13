@@ -1,11 +1,14 @@
 .timer {
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: "Covered By Your Grace", cursive;
   line-height: 1;
   padding: 20px;
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
   div {
-    margin: 0px 15px;
+    margin: 0 15px;
     min-width: 100px;
 
     span {
@@ -16,12 +19,10 @@
   }
 }
 
-@media (max-height: 650px) and (max-width:680px) {
+@media (max-height: 650px) and (max-width: 680px) {
   .timer {
-    div {
-      span {
-        font-size: 4vh;
-      }
+    div span {
+      font-size: 4vh;
     }
 
     .days {
@@ -45,16 +46,12 @@
 @media (min-width: 320px) {
   .timer {
     align-items: flex-end;
-    display: flex;
-    flex-direction: column;
   }
 }
 
-@media (min-width: 768px),
-(orientation: landscape) {
+@media (min-width: 768px), (orientation: landscape) {
   .timer {
     align-items: flex-start;
-    display: flex;
     flex-direction: row;
   }
 }
