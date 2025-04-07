@@ -11,6 +11,7 @@ import type {
 })
 export class AnimationComponent {
   enabled = true;
+  candles = Array(30).fill(0);
   options: FireworksOptions = {
     opacity: 0.5, // fillStyle
     acceleration: 1.02,
